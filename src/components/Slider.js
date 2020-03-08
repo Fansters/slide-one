@@ -45,27 +45,15 @@ function Slider() {
          slideRight();
       });
       startSlide();
-      // let slideIndex = 0;
-      // showSlides();
+   };
 
-      // function showSlides() {
-      //    let i,
-      //       slides = document.getElementsByClassName('slide'),
-      //       dots = document.getElementsByClassName('dot');
-      //    for (i = 0; i < slides.length; i++) {
-      //       slides[i].style.display = 'none';
-      //    }
-      //    slideIndex++;
-      //    if (slideIndex > slides.length) {
-      //       slideIndex = 1;
-      //    }
-      //    for (i = 0; i < dots.length; i++) {
-      //       dots[i].className = dots[i].className.replace(' active', '');
-      //    }
-      //    slides[slideIndex - 1].style.display = 'block';
-      //    dots[slideIndex - 1].className += ' active';
-      //    setTimeout(showSlides, 2000); // Change image every 2 seconds
-      // }
+   // create onChangeSlide Arrow Function
+   const onChangeSlide = index => {
+      let sliderImages = document.querySelectorAll('.slide');
+      for (let i = 0; i < sliderImages.length; i++) {
+         sliderImages[i].style.display = 'none';
+      }
+      sliderImages[index].style.display = 'block';
    };
 
    return (
@@ -90,11 +78,11 @@ function Slider() {
          </div>
          <div id="arrow-right" className="arrow"></div>
          <div className="nav">
-            <div className="dot"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
+            <div onClick={() => onChangeSlide(0)} className="dot"></div>
+            <div onClick={() => onChangeSlide(1)} className="dot"></div>
+            <div onClick={() => onChangeSlide(2)} className="dot"></div>
+            <div onClick={() => onChangeSlide(3)} className="dot"></div>
+            <div onClick={() => onChangeSlide(4)} className="dot"></div>
          </div>
       </div>
    );
