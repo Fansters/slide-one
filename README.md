@@ -1,5 +1,9 @@
-Simple ReactJS slider, clickable dots, infinite slides. Working on mobile.
+Simple ReactJS slider, clickable dots, infinite slides. Working on mobile and desktop.
 No swiping functionality.
+
+Slider is hosted using Google's Firebase, so there is no additional setup
+Open slider by clicking - https://slider-test-c1598.web.app/
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
